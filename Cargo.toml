@@ -1,5 +1,5 @@
 [package]
-name = "stempelkarten"
+name = "thw-stempelkarten"
 version = "0.1.0"
 edition = "2024"
 
@@ -12,5 +12,8 @@ log = "0.4.27"
 serde = { version = "1.0.219", features = ["derive"] }
 toml = "0.8.22"
 typst = "0.13.1"
-typst-as-lib = { version = "0.14.1", features = ["typst-kit-fonts", "packages"] }
+typst-as-lib = { version = "0.14.1", features = [
+    "typst-kit-fonts",
+    "packages",
+] }
 typst-pdf = "0.13.1"
