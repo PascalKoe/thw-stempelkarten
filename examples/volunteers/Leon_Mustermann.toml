@@ -1,0 +1,22 @@
+# Vorname und Nachname des Helfers
+first_name = "Leon"
+last_name = "Mustermann"
+
+# Helferausweis Nummer
+barcode = "19283746-50"
+
+# Einsatzbefähigung und ob diese angezeigt werden soll
+qualified = false
+hide_qualified = true
+
+# Pfad an dem das Helferbild abelegt ist innerhalb des Bilder-Ordners
+picture = "placeholder.png"
+
+# Dislozierung von oberster OE hin zu StAN-Position
+deployment = ["Jugendgruppe", "Junghelfer"]
+
+# Unsortierte Liste an Zusatzqualifikationen
+qualifications = []
+
+# Unsortierte Liste an Fahrerlaubnissen
+licenses = []

@@ -1,0 +1,22 @@
+# Vorname und Nachname der Helferin
+first_name = "Erika"
+last_name = "Mustermann"
+
+# Helferausweis Nummer
+barcode = "09876543-21"
+
+# Einsatzbefähigung und ob diese angezeigt werden soll
+qualified = false
+hide_qualified = false
+
+# Pfad an dem das Helferbild abelegt ist innerhalb des Bilder-Ordners
+picture = "placeholder.png"
+
+# Dislozierung von oberster OE hin zu StAN-Position
+deployment = ["TZ", "Bergung", "Gruppenführerin"]
+
+# Unsortierte Liste an Zusatzqualifikationen
+qualifications = ["AGT", "Motorsäge A/B"]
+
+# Unsortierte Liste an Fahrerlaubnissen
+licenses = ["KF B", "Staplerschein"]

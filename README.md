@@ -6,6 +6,8 @@ Das Programm erlaubt es aus strukturierten Helferdaten Stempelkarten für die TH
 
 ![Beispiel einer Stempelkarte](examples/example.png)
 
+Unter [examples/example.pdf](examples/example.pdf) ist ein beispielhaftes PDF hinterlegt.
+
 ## Verwendung
 Das Programm verfügt über keine grafische Oberfläche und muss über die Kommandozeile bedient werden. Alternativ kann auch ein Skript erstellt werden, welche die notwendigen Parameter definiert.
 
