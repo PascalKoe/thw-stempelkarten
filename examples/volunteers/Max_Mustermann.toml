@@ -1,9 +1,27 @@
+# Vorname und Nachname des Helfers
 first_name = "Max"
 last_name = "Mustermann"
+
+# Helferausweis Nummer
 barcode = "12345678-90"
+
+# Einsatzbefähigung und ob diese angezeigt werden soll
 qualified = true
 hide_qualified = false
+
+# Pfad an dem das Helferbild abelegt ist innerhalb des Bilder-Ordners
 picture = "placeholder.png"
-deployment = ["GAGr", "Helferanwärter"]
-qualifications = ["Motorsäge A/B"]
+
+# Dislozierung von oberster OE hin zu StAN-Position
+deployment = ["TZ", "FGr. N", "Fachhelfer"]
+
+# Unsortierte Liste an Zusatzqualifikationen
+qualifications = [
+    "AGT",
+    "Motorsäge A/B",
+    "Thermisches Trennen",
+    "Schweißen",
+]
+
+# Unsortierte Liste an Fahrerlaubnissen
 licenses = ["KF CE", "Staplerschein"]
