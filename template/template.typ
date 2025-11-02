@@ -1,5 +1,3 @@
-#import sys: inputs
-
 #import "@local/tiaoma:0.3.0"
 #import "utils.typ": *
 
@@ -43,9 +41,9 @@
   ]
 })
 
-#let person_column(last_name, first_name, qualified, hide_indicator, picture_file) = {
+#let person_column(last_name, first_name, qualified, hide_qualified, picture_file) = {
   let content = [
-    #place(top + right, qualified_indicator(qualified, hidden: hide_indicator))
+    #place(top + right, qualified_indicator(qualified, hidden: hide_qualified))
     #picture(picture_file)
     #name_section(last_name, first_name)
   ]
@@ -92,12 +90,12 @@
 })
 
 
-#let card(last_name, first_name, qualified, deployment, licenses, qualifications, registration_id, picture_file, hide_indicator: false) = {
+#let card(last_name, first_name, qualified, deployment, licenses, qualifications, registration_id, picture_file, hide_qualified) = {
   set box(width: 100%, height: 100%)
   
   let person_container = box(
     inset: (top: 3mm, left: 3mm, bottom: 3mm, right: 3mm),
-    person_column(last_name, first_name, qualified, hide_indicator, picture_file)
+    person_column(last_name, first_name, qualified, hide_qualified, picture_file)
   );
 
   let details_container = box(
@@ -130,10 +128,10 @@
   )
 }
 
-#let input = inputs.volunteers
+#let input = sys.inputs.volunteers
 #for chunk in input.chunks(10) {
   let cards = chunk.map(details => {
-    card(details.last_name, details.first_name, details.qualified, details.deployment, details.licenses, details.qualifications, details.barcode, details.picture, hide_indicator: details.at("hide_indicator", default: false))
+    card(details.last_name, details.first_name, details.qualified, details.deployment, details.licenses, details.qualifications, details.barcode, details.picture, details.hide_qualified)
   })
 
   [
