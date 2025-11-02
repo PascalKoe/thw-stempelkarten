@@ -13,7 +13,7 @@ Das Programm verfügt über keine grafische Oberfläche und muss über die Komma
 
 ```
 $ thw-stempelkarten --help
-Usage: thw-stempelkarten --volunteer-dir <VOLUNTEER_DIR> --picture-dir <PICTURE_DIR> --template-dir <TEMPLATE_DIR> --output <OUTPUT>
+Usage: thw-stempelkarten [OPTIONS] --volunteer-dir <VOLUNTEER_DIR> --picture-dir <PICTURE_DIR> --template-dir <TEMPLATE_DIR>
 
 Options:
   -v, --volunteer-dir <VOLUNTEER_DIR>  The directory containing all of the volunteer description toml files

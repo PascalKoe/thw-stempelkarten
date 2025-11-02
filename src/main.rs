@@ -25,7 +25,7 @@ pub struct Config {
 
     /// The output file name under which the generated PDF is save to.
     #[arg(long, short)]
-    output: String,
+    output: Option<String>,
 }
 
 fn main() -> anyhow::Result<()> {
@@ -50,7 +50,14 @@ fn main() -> anyhow::Result<()> {
     let template_inputs = template::TemplateInputs::new(volunteers);
 
     let pdf_bytes = template_compiler.generate_pdf(template_inputs)?;
-    std::fs::write(&config.output, pdf_bytes).context("could not write to output file")?;
+    let output_file = match config.output {
+        Some(o) => o,
+        None => {
+            let current_time = chrono::Local::now();
+            current_time.format("%FT%H-%M-%S_Stempelkarten.pdf").to_string()
+        }
+    };
+    std::fs::write(&output_file, pdf_bytes).context("could not write to output file")?;
 
     Ok(())
 }
