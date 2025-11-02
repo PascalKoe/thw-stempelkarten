@@ -104,11 +104,11 @@ pub struct TemplateVolunteer {
     pub last_name: Str,
     pub barcode: Str,
     pub qualified: bool,
+    pub hide_qualified: bool,
     pub picture: Str,
     pub deployment: Array,
     pub licenses: Array,
     pub qualifications: Array,
-    pub hide_indicator: bool,
 }
 
 impl From<TemplateVolunteer> for Dict {
@@ -123,8 +123,8 @@ impl From<TemplateVolunteer> for Dict {
         dict.insert(Str::from("deployment"), Value::Array(volunteer.deployment));
         dict.insert(Str::from("licenses"), Value::Array(volunteer.licenses));
         dict.insert(
-            Str::from("hide_indicator"),
-            Value::Bool(volunteer.hide_indicator),
+            Str::from("hide_qualified"),
+            Value::Bool(volunteer.hide_qualified),
         );
         dict.insert(
             Str::from("qualifications"),
@@ -170,7 +170,7 @@ impl From<volunteers::Volunteer> for TemplateVolunteer {
             deployment,
             licenses,
             qualifications,
-            hide_indicator: volunteer.hide_indicator.unwrap_or_default(),
+            hide_qualified: volunteer.hide_qualified.unwrap_or_default(),
         }
     }
 }

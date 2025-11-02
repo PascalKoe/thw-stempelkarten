@@ -9,11 +9,11 @@ pub struct Volunteer {
     pub last_name: String,
     pub barcode: String,
     pub qualified: bool,
+    pub hide_qualified: Option<bool>,
     pub picture: String,
     pub deployment: Vec<String>,
     pub licenses: Vec<String>,
     pub qualifications: Vec<String>,
-    pub hide_indicator: Option<bool>,
 }
 
 impl Volunteer {

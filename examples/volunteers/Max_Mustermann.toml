@@ -1,8 +1,8 @@
 first_name = "Max"
 last_name = "Mustermann"
 barcode = "12345678-90"
-qualified = false
-hide_indicator = true
+qualified = true
+hide_qualified = false
 picture = "placeholder.png"
 deployment = ["GAGr", "Helferanwärter"]
 qualifications = ["Motorsäge A/B"]
