@@ -104,7 +104,7 @@
   );
 
   let barcode_container =  box(
-    inset: (top: 3mm, left: 3mm, bottom: 3mm, right: 3mm),
+    inset: (top: 8mm, left: 3mm, bottom: 8mm, right: 3mm),
     rotate(reflow: true, 270deg, tiaoma.code128(
       height: 100%,
       width: 100%,
