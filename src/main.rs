@@ -18,7 +18,7 @@ pub struct Config {
     #[arg(long, short)]
     picture_dir: String,
 
-    /// The directory containt the template including all assets like fonts and
+    /// The directory containing the template including all assets like fonts and
     /// packages
     #[arg(long, short)]
     template_dir: String,
